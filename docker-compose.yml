@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    image: oict
+    ports:
+      - "10100:10100"
+    environment:
+      - API_KEY=7c720d70-a8cf-47e2-beb7-4e11dff82097
+      - PORT=10100
