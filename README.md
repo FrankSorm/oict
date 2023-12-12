@@ -79,3 +79,16 @@ Pro endpoint `/card/{cardId}` můžete očekávat odpověď ve formátu JSON s i
   "state": "Aktivní v držení klienta",
   "validTo": "12.08.2020"
 }
+
+## Code review - obecné
+
+- bylo by dobré mít v readme definovanou verzi node.js, která je potřeba pro spuštění aplikace
+  - vyčetl jsem z Dockerfilu
+  - proč verze 21?
+- zajímavej port 10100
+- v dependencies by neměly být závislosti, které se nepoužívají
+  - např. `@types/..` nebo `jest`
+- jaké jsou výhody a nevýhody generovaného swaggeru?
+  - návratové hodnoty v kódu a v dokumentaci se neshodují
+- testy neprochází
+- proč je složka testů v `src`?
