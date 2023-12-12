@@ -13,10 +13,10 @@ class App {
   }
 
   private config(): void {
-    this.app.use(express.json());
+    this.app.use(express.json()); // [CR] je to nutné?
     this.app.use('/swagger', express.static('swagger'));
-    this.app.use(bodyParser.json());
-    this.app.use(this.jsonErrorHandler);
+    this.app.use(bodyParser.json()); // [CR] je to nutné?
+    this.app.use(this.jsonErrorHandler); // [CR] tohle pro routes nezafunguje
   }
 
   private routes(): void {
